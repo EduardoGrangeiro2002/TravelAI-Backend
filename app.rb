@@ -2,6 +2,8 @@ require 'sinatra'
 require './lib/model/travel'
 require 'sinatra/json'
 
+set :bind, '0.0.0.0'
+
 post '/travel' do
   required_params = [:city, :country, :start_date, :end_date, :origin]
   unless required_params.all? { |param| params[param] && !params[param].empty? }
@@ -22,4 +24,8 @@ post '/travel' do
     status 500
     json({ error: "Internal Server Error #{e.message}" })
   end
+end
+
+get '/' do
+  'Hello world!'
 end

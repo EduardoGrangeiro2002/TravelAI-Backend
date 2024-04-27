@@ -7,3 +7,4 @@ source "https://rubygems.org"
 gem "sinatra"
 gem "dotenv-rails"
 gem "ruby-openai"
+gem 'sinatra-contrib'
