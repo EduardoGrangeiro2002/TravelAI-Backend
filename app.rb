@@ -1,6 +1,13 @@
 require 'sinatra'
 require './lib/model/travel'
 require 'sinatra/json'
+require 'sinatra/cors'
+
+set :allow_origin, "http://localhost:3000"
+set :allow_methods, "GET,HEAD,POST"
+set :allow_headers, "content-type,if-modified-since"
+set :expose_headers, "location,link"
+
 
 set :bind, '0.0.0.0'
 
@@ -18,7 +25,7 @@ post '/travel' do
       params[:end_date],
       params[:origin]
     ).travel
-
+    p response
     json response
   rescue StandardError => e
     status 500

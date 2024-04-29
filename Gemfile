@@ -8,3 +8,4 @@ gem "sinatra"
 gem "dotenv-rails"
 gem "ruby-openai"
 gem 'sinatra-contrib'
+gem 'sinatra-cors'
