@@ -21,8 +21,12 @@ TravelAI is an innovative application designed to enhance the travel planning ex
    ```bash
    git clone https://github.com/EduardoGrangeiro2002/TravelAI.git
    cd TravelAI
+2. **Rename .env.example to .env**
+3. **OpenAI key in .env**
+4. **Docker**
+   ```bash
    docker build -t travelai .
-   docker run -d -p 8080:4567 travelai ```
+   docker run -d -p 8080:4567 travelai
 
 ### Accessing the Application
 Once the application is running, you can access it by navigating to `http://localhost:8080` in your web browser. This will take you to the main interface where you can start planning your travel using the AI-generated itineraries.
